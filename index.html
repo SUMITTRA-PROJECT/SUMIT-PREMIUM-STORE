@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* 🎄 Christmas Offer Section */
+.christmas-event{
+  margin:40px;
+  padding:30px;
+  background:linear-gradient(135deg,#8b0000,#111);
+  border-radius:20px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  animation:fadeUp 1s;
+}
+
+.christmas-event img{
+  width:300px;
+  border-radius:15px;
+  animation:float 3s infinite;
+}
+
+.christmas-event button{
+  padding:10px 25px;
+  border:none;
+  border-radius:25px;
+  background:gold;
+  font-weight:bold;
+  cursor:pointer;
+}
+.top-offer{
+  background:#8b0000;
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  font-size:14px;
+  animation:slideDown 1s;
+}
+@keyframes slideDown{
+  from{transform:translateY(-100%);}
+  to{transform:translateY(0);}
+}
+.offer-badge{
+  position:absolute;
+  background:gold;
+  color:#000;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  top:10px;
+  left:10px;
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  50%{transform:scale(1.1);}
+}
+.side-offer{
+  position:fixed;
+  top:40%;
+  left:0;
+  background:#8b0000;
+  padding:12px;
+  border-radius:0 12px 12px 0;
+  font-size:13px;
+  animation:float 3s infinite;
+}
+
+</style>
+<meta charset="UTF-8">
+<title>Sumit Premium Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<p>🎄 Christmas Special Edition Product  
+✔ Limited Stock  
+✔ Extra Discount for VIP Customers  
+✔ Premium Quality Guaranteed  
+✔ Fast Delivery in Khagrachari
+ </p>
+<div class="bg-animation"></div>
+
+<header>
+  <h1 onclick="goHome()">SUMIT PREMIUM STORE</h1>
+
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProduct()">
+
+  <nav>
+    <a href="#" onclick="filterCategory('All')">Home</a>
+    <a href="#" onclick="filterCategory('Food')">Food</a>
+    <a href="#" onclick="filterCategory('Digital')">Digital</a>
+    <a href="#" onclick="filterCategory('VIP')">VIP</a>
+    <a href="#" onclick="filterCategory('Lifestyle')">Lifestyle</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h2>Premium Products for <span>Elite Customers</span></h2>
+  <p>📍 Khagrachari, Chittagong, Bangladesh</p>
+  <p>
+    📞 <a href="tel:01559051905">01559051905</a>
+  </p>
+  <div class="christmas-event">
+  <img src="https://picsum.photos/400/300?christmas">
+  <div>
+    <h2>🎄 Christmas Mega Offer 🎄</h2>
+    <p>Up to <b>50% OFF</b> on SUMIT PREMIUM STORE</p>
+    <button onclick="goHome()">Shop Now</button>
+  </div>
+</div>
+<div class="top-offer">
+  🎄 Christmas Sale Live! | Up to <b>50% OFF</b> | Free Delivery in Khagrachari
+</div>
+
+</section>
+
+<section class="section">
+  <h3>All Products</h3>
+  <div id="product-list" class="products"></div>
+</section>
+
+<div class="cart">
+  🛒 Cart: <span id="cartCount">0</span>
+</div>
+
+<!-- Product Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">✖</span>
+    <img id="modalImg">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+
+    <div class="rating" id="ratingStars"></div>
+
+    <textarea id="commentBox" placeholder="Write your comment..."></textarea>
+    <button onclick="submitReview()">Submit</button>
+	<span class="offer-badge">🎁 Christmas 30% OFF</span>
+	
+</div>
+<div class="side-offer">
+  ❄️ Christmas Deal<br>
+  <b>Buy 2 Get 1 Free</b>
+</div>
+<div style="font-size:12px;">
+  🎄 Extra 10% OFF on checkout
+<p style="margin-top:10px; color:gold;">
+  🎅 Christmas Season Special — Limited Time Only!
+</p>
+<p>
+🎄 Christmas Delivery Available in <b>Khagrachari, Chittagong</b><br>
+Thank you for shopping with Sumit Premium Store
+</p>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
